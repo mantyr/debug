@@ -1,14 +1,14 @@
-# Debugs
+# Debug
 
-[![Build Status](https://travis-ci.org/mantyr/debugs.svg?branch=master)](https://travis-ci.org/mantyr/debugs)
-[![GoDoc](https://godoc.org/github.com/mantyr/debugs?status.png)](http://godoc.org/github.com/mantyr/debugs)
+[![Build Status](https://travis-ci.org/mantyr/debug.svg?branch=master)](https://travis-ci.org/mantyr/debug)
+[![GoDoc](https://godoc.org/github.com/mantyr/debug?status.png)](http://godoc.org/github.com/mantyr/debug)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 
 This stable version
 
 ## Installation
 
-    $ go get github.com/mantyr/debugs
+    $ go get github.com/mantyr/debug
 
 ## Example
 
@@ -20,7 +20,7 @@ This stable version
 package main
 
 import (
-    "github.com/mantyr/debugs"
+    "github.com/mantyr/debug"
     "flag"
 )
 
@@ -28,15 +28,15 @@ func init() {
     is_debug := flag.Bool("debug", false, "Debug programs")
     flag.Parse()
 
-    debugs.SetDebug(*is_debug)
+    debug.SetDebug(*is_debug)
 }
 
 func main() {
     // ...
 
     val := "123"
-    debugs.Println("log message", val)          // for log.Println("log message", val)
-    debugs.Printf("log message %q\r\n", val)    // for log.Printf("log message %q\r\n", val)
+    debug.Println("log message", val)          // for log.Println("log message", val)
+    debug.Printf("log message %q\r\n", val)    // for log.Printf("log message %q\r\n", val)
 
     // ...
 }

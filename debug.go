@@ -1,4 +1,4 @@
-package debugs
+package debug
 
 import (
     "log"
