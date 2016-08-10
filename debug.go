@@ -57,7 +57,7 @@ func Printf(format string, v ...interface{}) {
     }
 }
 
-func LevelPrintln(level string, v...interface{}) {
+func LevelPrintln(level string, v ...interface{}) {
     if IsDebug() && ((level != "db" && IsLevel("all")) || IsLevel(level)) {
         log.Println(v...)
     }
